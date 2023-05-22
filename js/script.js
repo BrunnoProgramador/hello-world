@@ -1,15 +1,33 @@
 // Calculadora de apenas dois números
-function soma(num1, num2) {
-    alert(num1 + num2);
+function somass() {
+    let soma1 = parseFloat(document.getElementById("soma1").value)
+    let soma2 = parseFloat(document.getElementById("soma2").value)
+    let resultado = soma1 + soma2
+    document.getElementById("resultadosoma").innerHTML = resultado
 }
-function divisao(num1, num2) {
-    alert(num1 / num2);
+function subtracao() {
+    let menos1 = parseFloat(document.getElementById("menos1").value)
+    let menos2 = parseFloat(document.getElementById("menos2").value)
+    let resultado = menos1 - menos2
+    document.getElementById("resutadosubtracao").innerHTML = resultado
 }
-function multiplicacao(num1, num2) {
-    alert(num1 * num2);
+function multiplicacao() {
+    let multiplicar1 = parseFloat(document.getElementById("multiplicar1").value) 
+    let multiplicar2 = parseFloat(document.getElementById("multiplicar2").value)
+    let resultado = multiplicar1 * multiplicar2
+    document.getElementById("resultadomultiplicacao").innerHTML = resultado 
 }
-function subtracao(num1, num2) {
-    alert(num1 - num2);
+function divisao () {
+    let dividido1 = parseFloat(document.getElementById("dividido1").value)
+    let dividido2 = parseFloat(document.getElementById("dividido2").value)
+    let resultado
+    if (dividido2 == 0) {
+        document.getElementById("resultadodivisao").innerHTML = ("Não existe divisão por zero!!")
+    }
+    else {
+        resultado = dividido1 / dividido2
+        document.getElementById("resultadodivisao").innerHTML = resultado
+    }
 }
 
 //Mostrar Nome
@@ -20,29 +38,35 @@ function mostrarnome() {
 
 //Área do Retângulo
 function areaR() {
-    let base = prompt("Base:")
-    let altura = prompt("Altura:")
-    let area
-    area = base * altura
-    alert("A área do retângulo é: " + area)
+    let baseR = parseFloat(document.getElementById("baseR").value)
+    let alturaR = parseFloat(document.getElementById("alturaR").value)
+    let area = baseR * alturaR
+    document.getElementById("areaRe").innerHTML = area
 }
 
 //Area do Circulo
 function areaC() {
-    let raio = prompt("Valor do raio:")
+    let raio = parseFloat(document.getElementById("raio").value)
     let areaC
     areaC = Math.pow(raio, 2) * Math.PI
-    alert("A área do circulo é:" + areaC)
+   document.getElementById("areaC").innerHTML = areaC
+}
+// Área do triangulo
+function triangulo(){
+    let baseT = parseFloat(document.getElementById("baseT").value)
+    let alturaT = parseFloat(document.getElementById("alturaT").value)
+    let area = (baseT * alturaT) / 2
+    document.getElementById("areaTr").innerHTML = area
 }
 
 //Descobrindo a Hipotenusa
 function hipotenusa() {
-    let co = prompt("valor do cateto oposto:")
-    let ca = prompt("Valor do cateto adjacente:")
+    let co =parseFloat(document.getElementById("co").value)
+    let ca =parseFloat(document.getElementById("ca").value)
     let hipotenusa
     hipotenusa = Math.pow(co, 2) + Math.pow(ca, 2)
     hipotenusa = Math.sqrt(hipotenusa)
-    alert("Hipotenusa é: " + hipotenusa)
+    document.getElementById("hipot").innerHTML = hipotenusa
 }
 
 //Converção de Real para Dólar

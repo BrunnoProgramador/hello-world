@@ -10,14 +10,71 @@
 </head>
 
 <body>
-    <button onclick="soma()">Soma</button>
-    <button onclick="subtracao()">Subtração</button>
-    <button onclick="multiplicacao()">Multiplicação</button>
-    <button onclick="divisao()">Divisão</button>
     <button onclick="mostrarnome()">Mostrar Nome</button>
-    <button onclick="areaR()">Área do retângulo</button>
-    <button onclick="areaC()">Área do circulo</button>
-    <button onclick="hipotenusa()">Hipotenusa</button>
+
+
+
+    <div class="soma">
+        <input type="number" id="soma1">
+        <input type="number" id="soma2">
+        <button onclick="soma()">Adição</button>
+        <div id="resultadosoma"></div>
+    </div>
+    <div class="subritacao">
+        <input type="number" id="menos1">
+        <input type="number" id="menos2">
+        <button onclick="subtracao()">Subtração</button>
+        <div id="resutadosubtracao"></div>
+    </div>
+    <div class="multiplicacao">
+        <input type="number" id="multiplicar1">
+        <input type="number" id="multiplicar2">
+        <button onclick="multiplicacao()">Multiplicação</button>
+        <div id="resultadomultiplicacao"></div>
+    </div>
+    <div class="divisao">
+        <input type="number" id="dividido1">
+        <input type="number" id="dividido2">
+        <button onclick="divisao()">Divisão</button>
+        <div id="resultadodivisao"></div>
+    </div>
+    <div class="circulo">
+        <input type="number" id="raio">
+        <button onclick="areaC()">Área do Círculo</button>
+        <div id="areaC"></div>
+    </div>
+    <div class="retangulo">
+        <input type="number" id="baseR">
+        <input type="number" id="alturaR">
+        <button onclick="areaR()">Área do Retângulo</button>
+        <div id="areaRe"></div>
+    </div>
+    <div class="triangulo">
+        <input type="number" id="baseT">
+        <input type="number" id="alturaT">
+        <button onclick="triangulo()">Área do Triângulo</button>
+        <div id="areaTr"></div>
+    </div>
+    <div class="hipotenusa">
+        <input type="number" id="ca">
+        <input type="number" id="co">
+        <button onclick="hipotenusa()">Hipotenusa</button>
+        <div id="hipot"></div>
+    </div>
+    <div class="converte">
+        <input type="number" id="real">
+        <input type="number" id="cotacao">
+        <button onclick="conversao()">Real para Dólar</button>
+        <div id="conver"></div>
+    </div>
+    
+
+
+
+
+
+    <!-- butoes -->
+
     <button onclick="convercao()">Real para dólar</button>
     <button onclick="temperatura()">Temperatura</button>
     <button onclick="medias()">Média</button>
