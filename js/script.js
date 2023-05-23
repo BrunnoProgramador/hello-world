@@ -49,7 +49,7 @@ function areaC() {
     let raio = parseFloat(document.getElementById("raio").value)
     let areaC
     areaC = Math.pow(raio, 2) * Math.PI
-   document.getElementById("areaC").innerHTML = areaC
+    document.getElementById("areaC").innerHTML = areaC
 }
 // Área do triangulo
 function triangulo(){
@@ -70,11 +70,12 @@ function hipotenusa() {
 }
 
 //Converção de Real para Dólar
-function convercao() {
-    let real = prompt("")
-    let convercao
-    convercao = real * 4, 93
-    alert(convercao)
+function conversao() {
+    let real = parseFloat(document.getElementById("real").value)
+    let cotacao = parseFloat(document.getElementById("cotacao").value)
+    let conversao
+    conversao = real * cotacao
+    document.getElementById("conver").innerHTML = conversao
 }
 
 //Converção de Celsius para Fahrenheit
