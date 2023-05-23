@@ -61,8 +61,8 @@ function triangulo(){
 
 //Descobrindo a Hipotenusa
 function hipotenusa() {
-    let co =parseFloat(document.getElementById("co").value)
-    let ca =parseFloat(document.getElementById("ca").value)
+    let co = parseFloat(document.getElementById("co").value)
+    let ca = parseFloat(document.getElementById("ca").value)
     let hipotenusa
     hipotenusa = Math.pow(co, 2) + Math.pow(ca, 2)
     hipotenusa = Math.sqrt(hipotenusa)
