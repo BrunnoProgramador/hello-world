@@ -74,45 +74,44 @@ function conversao() {
     let real = parseFloat(document.getElementById("real").value)
     let cotacao = parseFloat(document.getElementById("cotacao").value)
     let conversao
-    conversao = real * cotacao
+    conversao = real / cotacao
     document.getElementById("conver").innerHTML = conversao
 }
 
 //Converção de Celsius para Fahrenheit
 function temperatura() {
-    let celsius = prompt("")
-    let fahrenheit
-    fahrenheit = (celsius * 1, 8) + 32
-    alert("Conversão: " + fahrenheit)
+    let celsius = document.getElementById("celsius")
+    let mudado = document.getElementById("troca")
+    mudado.innerText = (parseFloat(celsius.value) * 1.8) + 32
 }
 
 //Média de 3 notas
 function medias() {
-    let mediau = parseFloat(prompt("nota: "))
-    let mediad = parseFloat(prompt("outra nota: "))
-    let mediat = parseFloat(prompt("outra nota: "))
-    let media
-    media = (mediau + mediad + mediat) / 3
-    alert("A media é: " + media.toFixed(2))
+    let media1 = parseFloat(document.getElementById("nota1").value)
+    let media2 = parseFloat(document.getElementById("nota2").value)
+    let media3 = parseFloat(document.getElementById("nota3").value)
+    let medido
+    medido = (media1 + media2 + media3) / 3
+    document.getElementById("medido").innerHTML = medido
 }
 
 //Bhaskara
 function raizes() {
-    let primeiro = parseFloat(prompt("A: "))
-    let segundo = parseFloat(prompt("B: "))
-    let terceiro = parseFloat(prompt("C:"))
+    let a = document.getElementById("a")
+    let b = document.getElementById("b")
+    let c = document.getElementById("c")
     let delta
-    let raizp
-    let raizs
-    delta = Math.pow(segundo, 2) - (4 * primeiro * terceiro)
+    let x1
+    let x2
+    delta = Math.pow(parseFloat(b.value), 2) - (4 * parseFloat(a.value) * parseFloat(c.value))
     if (delta < 0) {
-        alert("Essa conta não é possivel ser realizada!")
+        document.getElementById("alerta").innerText = ("Não deu :(")
     }
     else {
-        raizp = (- segundo - Math.sqrt(delta)) / (2 * primeiro)
-        raizs = (- segundo + Math.sqrt(delta)) / (2 * primeiro)
-        alert("Raiz 1: " + raizp)
-        alert("Rais 2: " + raizs)
+        x1 = (- parseFloat(b.value) - Math.sqrt(delta)) / (2 * parseFloat(a.value))
+        x2 = (- parseFloat(b.value) + Math.sqrt(delta)) / (2 * parseFloat(a.value))
+        document.getElementById("x1").innerHTML = ("X1 = ") + x1 
+        document.getElementById("x2").innerHTML = ("X2 = ") + x2
     }
 }
 
