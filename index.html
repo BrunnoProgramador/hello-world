@@ -5,93 +5,236 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/acalculadora.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Hello, World!</title>
 </head>
 
 <body>
-    <button onclick="mostrarnome()">Mostrar Nome</button>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
 
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("img/quadro.jpg");
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        #operacoes{
+            background-image: url("img/operacoes.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #formulas{
+            background-image: url("img/formulas.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        #conversoes{
+            background-image: url("img/maxresdefault.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
 <header>
-    <nav class>
-
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="img/calculadora.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            DOM
+          </a>
+          <button onclick="mostrarnome()">Mostrar Nome</button>
+        </div>
     </nav>
 </header>
+    <br>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="operacoes">
+                    <h2>As quatro operações</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="formulas">
+                    <h2>Conta com fórmula</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="conversoes">
+                    <h2>Conversões</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center-center">
+    <div class="row">
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded"> 
+                <div class="soma">
+                    <input type="number" id="soma1" placeholder="Digite um Número">
+                    <input type="number" id="soma2" placeholder="Digite outro Número">
+                    <button onclick="somas()">Adição</button>
+                    <div id="resultadosoma"></div>
+                </div>               
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="retangulo">
+                    <input type="number" id="baseR" placeholder="Base Retângulo">
+                    <input type="number" id="alturaR" placeholder="Altura Retângulo">
+                    <button onclick="areaR()">Área do Retângulo</button>
+                    <div id="areaRe"></div>
+                </div>
+            </div>
+        </div>    
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="temperatura">
+                    <input type="number" id="celsius" placeholder="Celsius">
+                    <button onclick="temperatura()">Temperatura</button>
+                    <div id="troca"></div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="subtracao">
+                    <input type="number" id="menos1" placeholder="Digite um Número">
+                    <input type="number" id="menos2"placeholder="Digite outro Número">
+                    <button onclick="subtracao()">Subtração</button>
+                    <div id="resutadosubtracao"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="circulo">
+                    <input type="number" id="raio" placeholder="Raio do Círculo">
+                    <button onclick="areaC()">Área do Círculo</button>
+                    <div id="areaC"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="converte">
+                    <input type="number" id="real" placeholder="Valor">
+                    <input type="number" id="cotacao" placeholder="Cotaçao do Dólar">
+                    <button onclick="conversao()">Real para Dólar</button>
+                    <div id="conver"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="multiplicacao">
+                    <input type="number" id="multiplicar1" placeholder="Digite um Número">
+                    <input type="number" id="multiplicar2" placeholder="Digite outro Número">
+                    <button onclick="multiplicacao()">Multiplicação</button>
+                    <div id="resultadomultiplicacao"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="triangulo">
+                    <input type="number" id="baseT" placeholder ="Base Triângulo">
+                    <input type="number" id="alturaT"placeholder = "Altura Triângulo">
+                    <button onclick="triangulo()">Área do Triângulo</button>
+                    <div id="areaTr"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="divisao">
+                    <input type="number" id="dividido1" placeholder="Digite um Número">
+                    <input type="number" id="dividido2" placeholder="Digite outro Número">
+                    <button onclick="divisao()">Divisão</button>
+                    <div id="resultadodivisao"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="media">
+                    <input type="number" id="nota1" placeholder="Nota 1">
+                    <input type="number" id="nota2" placeholder="Nota 2">
+                    <input type="number" id="nota3" placeholder="Nota 3">
+                    <button onclick="medias()">Média das Notas</button>
+                    <div id="medido"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="hipotenusa">
+                    <input type="number" id="ca" placeholder="Canteto Adjacente">
+                    <input type="number" id="co" placeholder="Cateto Oposto">
+                    <button onclick="hipotenusa()">Hipotenusa</button>
+                    <div id="hipot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="p-3 bg-info bg-opacity-10 border border-info border-info rounded">
+                <div class="raizes">
+                    <input type="number" id="a" placeholder="a">
+                    <input type="number" id="b" placeholder="b">
+                    <input type="number" id="c" placeholder="c">
+                    <button onclick="raizes()">Bhaskara</button>
+                    <div id="alerta"></div>
+                    <div id="x1"></div>
+                    <div id="x2"></div>
+                </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
 
-    <div class="soma">
-        <input type="number" id="soma1" placeholder="Digite um Número">
-        <input type="number" id="soma2" placeholder="Digite outro Número">
-        <button onclick="soma()">Adição</button>
-        <div id="resultadosoma"></div>
-    </div>
-    <div class="subritacao">
-        <input type="number" id="menos1" placeholder="Digite um Número">
-        <input type="number" id="menos2"placeholder="Digite outro Número">
-        <button onclick="subtracao()">Subtração</button>
-        <div id="resutadosubtracao"></div>
-    </div>
-    <div class="multiplicacao">
-        <input type="number" id="multiplicar1" placeholder="Digite um Número">
-        <input type="number" id="multiplicar2" placeholder="Digite outro Número">
-        <button onclick="multiplicacao()">Multiplicação</button>
-        <div id="resultadomultiplicacao"></div>
-    </div>
-    <div class="divisao">
-        <input type="number" id="dividido1" placeholder="Digite um Número">
-        <input type="number" id="dividido2" placeholder="Digite outro Número">
-        <button onclick="divisao()">Divisão</button>
-        <div id="resultadodivisao"></div>
-    </div>
-    <div class="circulo">
-        <input type="number" id="raio" placeholder="Raio do Círculo">
-        <button onclick="areaC()">Área do Círculo</button>
-        <div id="areaC"></div>
-    </div>
-    <div class="retangulo">
-        <input type="number" id="baseR" placeholder="Base Retângulo">
-        <input type="number" id="alturaR" placeholder="Altura Retângulo">
-        <button onclick="areaR()">Área do Retângulo</button>
-        <div id="areaRe"></div>
-    </div>
-    <div class="triangulo">
-        <input type="number" id="baseT" placeholder ="Base Triângulo">
-        <input type="number" id="alturaT"placeholder = "Altura Triângulo">
-        <button onclick="triangulo()">Área do Triângulo</button>
-        <div id="areaTr"></div>
-    </div>
-    <div class="hipotenusa">
-        <input type="number" id="ca" placeholder="Canteto Adjacente">
-        <input type="number" id="co" placeholder="Cateto Oposto">
-        <button onclick="hipotenusa()">Hipotenusa</button>
-        <div id="hipot"></div>
-    </div>
-    <div class="converte">
-        <input type="number" id="real" placeholder="Valor">
-        <input type="number" id="cotacao" placeholder="Cotaçao do Dólar">
-        <button onclick="conversao()">Real para Dólar</button>
-        <div id="conver"></div>
-    </div>
-    <div class="temperatura">
-        <input type="number" id="celsius" placeholder="Celsius">
-        <button onclick="temperatura()">Temperatura</button>
-        <div id="troca"></div>
-    </div>
-    <div class="media">
-        <input type="number" id="nota1" placeholder="Nota 1">
-        <input type="number" id="nota2" placeholder="Nota 2">
-        <input type="number" id="nota3" placeholder="Nota 3">
-        <button onclick="medias()">Média das Notas</button>
-        <div id="medido"></div>
-    </div>
-    <div class="raizes">
-        <input type="number" id="a" placeholder="a">
-        <input type="number" id="b" placeholder="b">
-        <input type="number" id="c" placeholder="c">
-        <button onclick="raizes()">Bhaskara</button>
-        <div id="alerta"></div>
-        <div id="x1"></div>
-        <div id="x2"></div>
-    </div>
 
 
 
@@ -101,7 +244,22 @@
 
 
 
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
+
+
+<footer>
+    <div class="card">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h5>Tudo que digo, é que digo é nada!</h5>
+            <footer class="blockquote-footer">Brunno Mariano <cite title="Source Title">23/05/2023</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+</footer>
 
 </html>
