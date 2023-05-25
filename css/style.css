@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/quadro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#operacoes {
+    background-image: url("../img/operacoes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#formulas {
+    background-image: url("../img/formulas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#conversoes {
+    background-image: url("../img/maxresdefault.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+input {
+    width: 200px;
+    border-radius: 2px;
+    border: 3px solid;
+}
+
+.butao {
+    padding: 2px 2px;
+    font-size: 15px;
+    background-color: aquamarine;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgba(255, 0, 0, 0.986);
+    cursor: pointer;
+    transition: 0.1s;
+    outline: 0;
+    border-radius: 30px;
+}
+
+.butao:hover {
+    background-color: rgb(255, 0, 0, 0.986);
+}
+
+.operacoes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulas {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.convert {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.soma {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.subtracao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.multiplicacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.divisao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.circulo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.retangulo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.triangulo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.hipotenusa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.raizes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.converte {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.temperatura {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}

@@ -9,46 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Hello, World!</title>
+    <title>Calculadora</title>
 </head>
 
 <body>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: 0;
-        }
-
-        body {
-            width: 100vw;
-            height: 100vh;
-            background-image: url("img/quadro.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        #operacoes {
-            background-image: url("img/operacoes.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        #formulas {
-            background-image: url("img/formulas.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        #conversoes {
-            background-image: url("img/maxresdefault.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-    </style>
+    
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
@@ -62,103 +27,96 @@
         </nav>
     </header>
     <br>
-    <div class="soma">
-        <input type="number" id="soma1" placeholder="Digite um Número">
-        <input type="number" id="soma2" placeholder="Digite outro Número">
-        <button onclick="soma()">Adição</button>
-        <div id="resultadosoma"></div>
+    <div class="calculadora">
+         <!-- As quatro operações -->
+        <div class="operacoes">
+            <div class="soma">
+                <input type="number" id="soma1" placeholder="Digite um Número">
+                <input type="number" id="soma2" placeholder="Digite outro Número">
+                <button onclick="soma()" class="butao">Adição</button>
+                <div id="resultadosoma"></div>
+            </div>
+            <div class="subtracao">
+                <input type="number" id="menos1" placeholder="Digite um Número">
+                <input type="number" id="menos2" placeholder="Digite outro Número">
+                <button onclick="subtracao()" class="butao">Subtração</button>
+                <div id="resutadosubtracao"></div>
+            </div>
+            <div class="multiplicacao">
+                <input type="number" id="multiplicar1" placeholder="Digite um Número">
+                <input type="number" id="multiplicar2" placeholder="Digite outro Número">
+                <button onclick="multiplicacao()" class="butao">Multiplicação</button>
+                <div id="resultadomultiplicacao"></div>
+            </div>
+            <div class="divisao">
+                <input type="number" id="dividido1" placeholder="Digite um Número">
+                <input type="number" id="dividido2" placeholder="Digite outro Número">
+                <button onclick="divisao()" class="butao">Divisão</button>
+                <div id="resultadodivisao"></div>
+            </div>
+        </div>
+        <!-- Contas com formulas -->
+        <div class="formulas">
+            <div class="circulo">
+                <input type="number" id="raio" placeholder="Raio do Círculo">
+                <button onclick="areaC()" class="butao">Área do Círculo</button>
+                <div id="areaC"></div>
+            </div>
+            <div class="retangulo">
+                <input type="number" id="baseR" placeholder="Base Retângulo">
+                <input type="number" id="alturaR" placeholder="Altura Retângulo">
+                <button onclick="areaR()" class="butao">Área do Retângulo</button>
+                <div id="areaRe"></div>
+            </div>
+            <div class="triangulo">
+                <input type="number" id="baseT" placeholder="Base Triângulo">
+                <input type="number" id="alturaT" placeholder="Altura Triângulo">
+                <button onclick="triangulo()" class="butao">Área do Triângulo</button>
+                <div id="areaTr"></div>
+            </div>
+            <div class="hipotenusa">
+                <input type="number" id="ca" placeholder="Canteto Adjacente">
+                <input type="number" id="co" placeholder="Cateto Oposto">
+                <button onclick="hipotenusa()" class="butao">Hipotenusa</button>
+                <div id="hipot"></div>
+            </div> 
+            
+        </div>
+        <!-- Conversão de unidades -->
+        <div class="convert">
+            <div class="temperatura">
+                <input type="number" id="celsius" placeholder="Celsius">
+                <button onclick="temperatura()" class="butao">Temperatura</button>
+                <div id="troca"></div>
+            </div>
+            <div class="converte">
+                <input type="number" id="real" placeholder="Valor">
+                <input type="number" id="cotacao" placeholder="Cotaçao do Dólar">
+                <button onclick="conversao()" class="butao">Real para Dólar</button>
+                <div id="conver"></div>
+            </div>
+            <div class="media">
+                <input type="number" id="nota1" placeholder="Nota 1">
+                <input type="number" id="nota2" placeholder="Nota 2">
+                <input type="number" id="nota3" placeholder="Nota 3">
+                <button onclick="medias()" class="butao">Média das Notas</button>
+                <div id="medido"></div>
+            </div>
+            <div class="raizes">
+                <input type="number" id="a" placeholder="a">
+                <input type="number" id="b" placeholder="b">
+                <input type="number" id="c" placeholder="c">
+                <button onclick="raizes()" class="butao">Bhaskara</button>
+                <div id="alerta"></div>
+                <div id="x1"></div>
+                <div id="x2"></div>
+            </div>
+        </div>
     </div>
-    <div class="subritacao">
-        <input type="number" id="menos1" placeholder="Digite um Número">
-        <input type="number" id="menos2" placeholder="Digite outro Número">
-        <button onclick="subtracao()">Subtração</button>
-        <div id="resutadosubtracao"></div>
-    </div>
-    <div class="multiplicacao">
-        <input type="number" id="multiplicar1" placeholder="Digite um Número">
-        <input type="number" id="multiplicar2" placeholder="Digite outro Número">
-        <button onclick="multiplicacao()">Multiplicação</button>
-        <div id="resultadomultiplicacao"></div>
-    </div>
-    <div class="divisao">
-        <input type="number" id="dividido1" placeholder="Digite um Número">
-        <input type="number" id="dividido2" placeholder="Digite outro Número">
-        <button onclick="divisao()">Divisão</button>
-        <div id="resultadodivisao"></div>
-    </div>
-    <div class="circulo">
-        <input type="number" id="raio" placeholder="Raio do Círculo">
-        <button onclick="areaC()">Área do Círculo</button>
-        <div id="areaC"></div>
-    </div>
-    <div class="retangulo">
-        <input type="number" id="baseR" placeholder="Base Retângulo">
-        <input type="number" id="alturaR" placeholder="Altura Retângulo">
-        <button onclick="areaR()">Área do Retângulo</button>
-        <div id="areaRe"></div>
-    </div>
-    <div class="triangulo">
-        <input type="number" id="baseT" placeholder="Base Triângulo">
-        <input type="number" id="alturaT" placeholder="Altura Triângulo">
-        <button onclick="triangulo()">Área do Triângulo</button>
-        <div id="areaTr"></div>
-    </div>
-    <div class="hipotenusa">
-        <input type="number" id="ca" placeholder="Canteto Adjacente">
-        <input type="number" id="co" placeholder="Cateto Oposto">
-        <button onclick="hipotenusa()">Hipotenusa</button>
-        <div id="hipot"></div>
-    </div>
-    <div class="converte">
-        <input type="number" id="real" placeholder="Valor">
-        <input type="number" id="cotacao" placeholder="Cotaçao do Dólar">
-        <button onclick="conversao()">Real para Dólar</button>
-        <div id="conver"></div>
-    </div>
-    <div class="temperatura">
-        <input type="number" id="celsius" placeholder="Celsius">
-        <button onclick="temperatura()">Temperatura</button>
-        <div id="troca"></div>
-    </div>
-    <div class="media">
-        <input type="number" id="nota1" placeholder="Nota 1">
-        <input type="number" id="nota2" placeholder="Nota 2">
-        <input type="number" id="nota3" placeholder="Nota 3">
-        <button onclick="medias()">Média das Notas</button>
-        <div id="medido"></div>
-    </div>
-    <div class="raizes">
-        <input type="number" id="a" placeholder="a">
-        <input type="number" id="b" placeholder="b">
-        <input type="number" id="c" placeholder="c">
-        <button onclick="raizes()">Bhaskara</button>
-        <div id="alerta"></div>
-        <div id="x1"></div>
-        <div id="x2"></div>
-    </div>
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
-
-
-<footer>
-    <div class="card">
-        <div class="card-body">
-            <blockquote class="blockquote mb-0">
-                <h5>Tudo que digo, é que digo é nada!</h5>
-                <footer class="blockquote-footer">Brunno Mariano <cite title="Source Title">23/05/2023</cite></footer>
-            </blockquote>
-        </div>
-    </div>
-</footer>
 
 </html>
