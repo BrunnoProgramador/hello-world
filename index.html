@@ -6,56 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/acalculadora.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Hello, World!</title>
 </head>
 
 <body>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: 0;
         }
 
-        body{
+        body {
             width: 100vw;
             height: 100vh;
             background-image: url("img/quadro.jpg");
-            background-size:cover;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
-        #operacoes{
+
+        #operacoes {
             background-image: url("img/operacoes.jpg");
             background-size: cover;
             background-repeat: no-repeat;
         }
-        #formulas{
+
+        #formulas {
             background-image: url("img/formulas.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
-        #conversoes{
+
+        #conversoes {
             background-image: url("img/maxresdefault.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
     </style>
-<header>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            <img src="img/calculadora.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            DOM
-          </a>
-          <button onclick="mostrarnome()">Mostrar Nome</button>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="img/calculadora.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    DOM
+                </a>
+                <button onclick="mostrarnome()">Mostrar Nome</button>
+            </div>
+        </nav>
+    </header>
     <br>
     <div class="soma">
         <input type="number" id="soma1" placeholder="Digite um Número">
@@ -65,7 +70,7 @@
     </div>
     <div class="subritacao">
         <input type="number" id="menos1" placeholder="Digite um Número">
-        <input type="number" id="menos2"placeholder="Digite outro Número">
+        <input type="number" id="menos2" placeholder="Digite outro Número">
         <button onclick="subtracao()">Subtração</button>
         <div id="resutadosubtracao"></div>
     </div>
@@ -93,8 +98,8 @@
         <div id="areaRe"></div>
     </div>
     <div class="triangulo">
-        <input type="number" id="baseT" placeholder ="Base Triângulo">
-        <input type="number" id="alturaT"placeholder = "Altura Triângulo">
+        <input type="number" id="baseT" placeholder="Base Triângulo">
+        <input type="number" id="alturaT" placeholder="Altura Triângulo">
         <button onclick="triangulo()">Área do Triângulo</button>
         <div id="areaTr"></div>
     </div>
@@ -137,8 +142,10 @@
 
 
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 
@@ -146,12 +153,12 @@
 <footer>
     <div class="card">
         <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <h5>Tudo que digo, é que digo é nada!</h5>
-            <footer class="blockquote-footer">Brunno Mariano <cite title="Source Title">23/05/2023</cite></footer>
-          </blockquote>
+            <blockquote class="blockquote mb-0">
+                <h5>Tudo que digo, é que digo é nada!</h5>
+                <footer class="blockquote-footer">Brunno Mariano <cite title="Source Title">23/05/2023</cite></footer>
+            </blockquote>
         </div>
-      </div>
+    </div>
 </footer>
 
 </html>

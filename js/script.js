@@ -12,12 +12,12 @@ function subtracao() {
     document.getElementById("resutadosubtracao").innerHTML = resultado
 }
 function multiplicacao() {
-    let multiplicar1 = parseFloat(document.getElementById("multiplicar1").value) 
+    let multiplicar1 = parseFloat(document.getElementById("multiplicar1").value)
     let multiplicar2 = parseFloat(document.getElementById("multiplicar2").value)
     let resultado = multiplicar1 * multiplicar2
-    document.getElementById("resultadomultiplicacao").innerHTML = resultado 
+    document.getElementById("resultadomultiplicacao").innerHTML = resultado
 }
-function divisao () {
+function divisao() {
     let dividido1 = parseFloat(document.getElementById("dividido1").value)
     let dividido2 = parseFloat(document.getElementById("dividido2").value)
     let resultado
@@ -52,7 +52,7 @@ function areaC() {
     document.getElementById("areaC").innerHTML = areaC
 }
 // Área do triangulo
-function triangulo(){
+function triangulo() {
     let baseT = parseFloat(document.getElementById("baseT").value)
     let alturaT = parseFloat(document.getElementById("alturaT").value)
     let area = (baseT * alturaT) / 2
@@ -110,7 +110,7 @@ function raizes() {
     else {
         x1 = (- parseFloat(b.value) - Math.sqrt(delta)) / (2 * parseFloat(a.value))
         x2 = (- parseFloat(b.value) + Math.sqrt(delta)) / (2 * parseFloat(a.value))
-        document.getElementById("x1").innerHTML = ("X1 = ") + x1 
+        document.getElementById("x1").innerHTML = ("X1 = ") + x1
         document.getElementById("x2").innerHTML = ("X2 = ") + x2
     }
 }
